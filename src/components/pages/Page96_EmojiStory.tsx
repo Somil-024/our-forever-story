@@ -27,7 +27,7 @@ const Page96_EmojiStory = ({ onNext, onBackToStory }: Page96Props) => {
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           transition={{ delay: 0.3, type: "spring" }}>
-          <Heart className="w-14 h-14 text-love-red" />
+          <Heart className="w-14 h-14 text-lavender" />
         </motion.div>
 
         <motion.h1 className="font-display text-4xl md:text-5xl font-bold mb-4 text-gradient-romantic"
@@ -74,7 +74,7 @@ const Page96_EmojiStory = ({ onNext, onBackToStory }: Page96Props) => {
           transition={{ delay: 2.5 }}>
           <button
             onClick={() => onBackToStory(61)}
-            className="px-8 py-4 bg-gradient-to-r from-lavender to-blush rounded-full font-display text-midnight-deep hover:shadow-glow transition-all">
+            className="px-8 py-4 bg-gradient-to-r from-lavender to-lavender-dark rounded-full font-display text-cream hover:shadow-glow transition-all">
             Back to Story → Page 61
           </button>
         </motion.div>

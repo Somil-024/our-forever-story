@@ -29,7 +29,7 @@ const Page97_FuturePicker = ({ onNext, onBackToStory }: Page97Props) => {
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           transition={{ delay: 0.3, type: "spring" }}>
-          <Heart className="w-14 h-14 text-love-red" />
+          <Heart className="w-14 h-14 text-lavender" />
         </motion.div>
 
         <motion.h1 className="font-display text-4xl md:text-5xl font-bold mb-4 text-gradient-romantic"
@@ -54,7 +54,7 @@ const Page97_FuturePicker = ({ onNext, onBackToStory }: Page97Props) => {
                 onClick={() => setSelected(future.text)}
                 className={`w-full px-8 py-6 rounded-full font-display text-lg transition-all transform hover:scale-105 active:scale-95 ${
                   selected === future.text
-                    ? "bg-gradient-to-r from-blush to-love-red text-white shadow-glow"
+                    ? "bg-gradient-to-r from-lavender to-lavender-dark text-white shadow-glow"
                     : "bg-lavender/30 text-cream/80 hover:shadow-glow"
                 }`}>
                 <div className="text-3xl mb-2">{future.emoji}</div>
@@ -69,7 +69,7 @@ const Page97_FuturePicker = ({ onNext, onBackToStory }: Page97Props) => {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.3 }}
-              className="mt-8 p-6 bg-gradient-to-r from-blush/20 to-love-red/20 rounded-2xl">
+              className="mt-8 p-6 bg-gradient-to-r from-lavender/20 to-lavender-dark/20 rounded-2xl">
               <p className="font-body text-xl text-cream/90 font-semibold">
                 Location fix: Tum + Main 💕
               </p>
@@ -83,7 +83,7 @@ const Page97_FuturePicker = ({ onNext, onBackToStory }: Page97Props) => {
           transition={{ delay: 2.5 }}>
           <button
             onClick={() => onBackToStory(76)}
-            className="px-8 py-4 bg-gradient-to-r from-lavender to-blush rounded-full font-display text-midnight-deep hover:shadow-glow transition-all">
+            className="px-8 py-4 bg-gradient-to-r from-lavender to-lavender-dark rounded-full font-display text-cream hover:shadow-glow transition-all">
             Back to Story → Page 76
           </button>
         </motion.div>
