@@ -126,7 +126,7 @@ const Index = () => {
       case 9: return <Page9_TransitionTo2025 onNext={goToNextPage} />;
       case 10: return <Page10_PromiseToCherish onNext={goToNextPage} />;
       case 11: return <Page11_TheGiftYouGaveMe onNext={goToNextPage} />;
-      case 12: return <Page12_SectionTransition onNext={goToNextPage} />;
+      case 12: return <Page12_SectionTransition onNext={goToNextPage} onGameClick={goToPage} />;
       case 13: return <Page13_YourNames onNext={goToNextPage} />;
       case 14: return <Page14_YourMind onNext={goToNextPage} />;
       case 15: return <Page15_YourHeart onNext={goToNextPage} />;
