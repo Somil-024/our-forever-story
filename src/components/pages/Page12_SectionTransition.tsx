@@ -5,9 +5,10 @@ import FloatingHearts from "@/components/FloatingHearts";
 
 interface PageProps {
   onNext: () => void;
+  onGameClick?: (pageNum: number) => void;
 }
 
-const Page12_SectionTransition = ({ onNext }: PageProps) => {
+const Page12_SectionTransition = ({ onNext, onGameClick }: PageProps) => {
   return (
     <div className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-6 py-20">
       <FloatingHearts />
@@ -120,12 +121,27 @@ const Page12_SectionTransition = ({ onNext }: PageProps) => {
         </motion.div>
 
         <motion.div
+          className="flex flex-col gap-4"
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 2.5 }}
         >
+          <motion.div
+            className="p-6 bg-gradient-to-r from-blush/10 to-love-red/10 rounded-2xl border border-blush/20"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 2.8 }}>
+            <p className="font-body text-lg text-cream/90 mb-4">
+              😌 Thoda emotional ho gaye? Chalo masti!
+            </p>
+            <button
+              onClick={() => onGameClick?.(91)}
+              className="w-full px-6 py-3 bg-gradient-to-r from-blush to-love-red rounded-full font-display text-white hover:shadow-glow transition-all transform hover:scale-105">
+              Love Meter khelo 🎮 → Page 91
+            </button>
+          </motion.div>
           <NavigationButton onClick={onNext}>
-            Take me deeper →
+            Continue →
           </NavigationButton>
         </motion.div>
       </motion.div>
