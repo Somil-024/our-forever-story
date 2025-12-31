@@ -36,27 +36,27 @@
 
     --radius: 1rem;
 
-    /* Custom romantic palette */
-    --blush: 330 70% 75%;
-    --blush-light: 330 80% 85%;
-    --lavender: 270 40% 80%;
-    --lavender-dark: 270 30% 60%;
-    --champagne: 45 70% 80%;
+    /* Custom romantic palette - Lavender Theme */
+    --blush: 270 70% 70%;
+    --blush-light: 270 80% 80%;
+    --lavender: 270 60% 65%;
+    --lavender-dark: 270 50% 45%;
+    --champagne: 280 50% 75%;
     --midnight: 240 40% 12%;
     --midnight-deep: 240 50% 6%;
     --cream: 40 30% 96%;
-    --rose-gold: 350 50% 70%;
-    
-    /* Gradients */
-    --gradient-romantic: linear-gradient(135deg, hsl(var(--blush)) 0%, hsl(var(--lavender)) 50%, hsl(var(--champagne)) 100%);
+    --rose-gold: 270 50% 70%;
+
+    /* Gradients - Lavender Focused */
+    --gradient-romantic: linear-gradient(135deg, hsl(270, 70%, 70%) 0%, hsl(270, 60%, 65%) 50%, hsl(280, 50%, 75%) 100%);
     --gradient-midnight: linear-gradient(180deg, hsl(var(--midnight-deep)) 0%, hsl(var(--midnight)) 50%, hsl(240, 30%, 18%) 100%);
-    --gradient-glow: radial-gradient(ellipse at center, hsl(var(--blush) / 0.3) 0%, transparent 70%);
+    --gradient-glow: radial-gradient(ellipse at center, hsl(270, 70%, 70% / 0.3) 0%, transparent 70%);
     --gradient-hero: linear-gradient(135deg, hsl(var(--midnight-deep)) 0%, hsl(270, 30%, 15%) 50%, hsl(var(--midnight)) 100%);
-    
-    /* Shadows */
-    --shadow-glow: 0 0 60px hsl(var(--blush) / 0.4);
+
+    /* Shadows - Lavender Glow */
+    --shadow-glow: 0 0 60px hsl(270, 70%, 70% / 0.4);
     --shadow-soft: 0 10px 40px hsl(240, 50%, 5% / 0.5);
-    --shadow-romantic: 0 0 100px hsl(var(--lavender) / 0.3);
+    --shadow-romantic: 0 0 100px hsl(270, 60%, 65% / 0.4);
 
     --sidebar-background: 240 20% 8%;
     --sidebar-foreground: 40 30% 96%;
@@ -90,7 +90,7 @@
   }
 
   ::selection {
-    background: hsl(var(--blush) / 0.4);
+    background: hsl(270, 70%, 70% / 0.4);
     color: hsl(var(--cream));
   }
 }
@@ -128,22 +128,22 @@
   }
 
   .glow-blush {
-    box-shadow: var(--shadow-glow);
+    box-shadow: 0 0 60px hsl(270, 70%, 70% / 0.4);
   }
 
   .glow-text {
-    text-shadow: 0 0 40px hsl(var(--blush) / 0.6), 0 0 80px hsl(var(--lavender) / 0.4);
+    text-shadow: 0 0 40px hsl(270, 70%, 70% / 0.6), 0 0 80px hsl(270, 60%, 65% / 0.4);
   }
 
   .romantic-border {
-    border: 1px solid hsl(var(--blush) / 0.3);
-    box-shadow: inset 0 0 30px hsl(var(--blush) / 0.1);
+    border: 1px solid hsl(270, 70%, 70% / 0.3);
+    box-shadow: inset 0 0 30px hsl(270, 70%, 70% / 0.1);
   }
 
   .glass-card {
     background: hsl(var(--midnight) / 0.6);
     backdrop-filter: blur(20px);
-    border: 1px solid hsl(var(--blush) / 0.2);
+    border: 1px solid hsl(270, 70%, 70% / 0.2);
   }
 }
 
@@ -387,11 +387,11 @@
   }
 
   ::-webkit-scrollbar-thumb {
-    background: hsl(var(--blush) / 0.5);
+    background: hsl(270, 70%, 70% / 0.5);
     border-radius: 4px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: hsl(var(--blush) / 0.7);
+    background: hsl(270, 70%, 70% / 0.7);
   }
 }
