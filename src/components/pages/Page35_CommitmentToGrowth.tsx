@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Sparkles, Growth } from "lucide-react";
+import { Sparkles, TrendingUp } from "lucide-react";
 import NavigationButton from "@/components/NavigationButton";
 import FloatingHearts from "@/components/FloatingHearts";
 
