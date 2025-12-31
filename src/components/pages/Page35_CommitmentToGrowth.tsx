@@ -144,7 +144,7 @@ const Page35_CommitmentToGrowth = ({ onNext, onGameClick }: PageProps) => {
             </p>
             <button
               onClick={() => onGameClick?.(94)}
-              className="w-full px-6 py-3 bg-gradient-to-r from-blush to-love-red rounded-full font-display text-white hover:shadow-glow transition-all transform hover:scale-105">
+              className="w-full px-6 py-3 bg-gradient-to-r from-lavender to-lavender-dark rounded-full font-display text-white hover:shadow-glow transition-all transform hover:scale-105">
               Truth ya Dare → Page 94
             </button>
           </motion.div>
