@@ -25,7 +25,7 @@ const PageIndicator = ({ currentPage, totalPages, onPageClick }: PageIndicatorPr
   );
 
   return (
-    <div className="fixed bottom-8 left-1/2 -translate-x-1/2 z-50">
+    <div className="fixed top-4 left-1/2 -translate-x-1/2 z-50">
       <motion.div 
         className="flex items-center gap-2 px-6 py-3 rounded-full glass-card"
         initial={{ y: 50, opacity: 0 }}

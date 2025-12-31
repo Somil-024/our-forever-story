@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Coffee, Film, Sunrise, Heart } from "lucide-react";
+import { Utensils, Film, Sunrise, Heart } from "lucide-react";
 import NavigationButton from "@/components/NavigationButton";
 import TwinklingStars from "@/components/TwinklingStars";
 
@@ -8,7 +8,7 @@ interface PageProps {
 }
 
 const moments = [
-  { icon: Coffee, text: "A coffee date with you > fancy dinner without you" },
+  { icon: Utensils, text: "A panipuri date with you > fancy dinner without you" },
   { icon: Film, text: "A silent moment with you > crowded party without you" },
   { icon: Sunrise, text: "A normal day with you > holiday without you" },
 ];
