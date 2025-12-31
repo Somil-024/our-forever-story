@@ -126,8 +126,56 @@ const Index = () => {
       case 18: return <Page18_YourBeauty onNext={goToNextPage} />;
       case 19: return <Page19_PanipuriDates onNext={goToNextPage} />;
       case 20: return <Page20_MovieNights onNext={goToNextPage} />;
+      case 21: return <Page21_RandomDrives onNext={goToNextPage} />;
+      case 22: return <Page22_FavoritePlace1 onNext={goToNextPage} />;
+      case 23: return <Page23_FavoritePlace2 onNext={goToNextPage} />;
+      case 24: return <Page24_FavoritePlace3 onNext={goToNextPage} />;
+      case 25: return <Page25_FavoritePlace4 onNext={goToNextPage} />;
+      case 26: return <Page26_FavoritePlace5 onNext={goToNextPage} />;
+      case 27: return <Page27_QuietMoments onNext={goToNextPage} />;
+      case 28: return <Page28_Fights onNext={goToNextPage} />;
+      case 29: return <Page29_Forgiveness onNext={goToNextPage} />;
+      case 30: return <Page30_ApologyBegins onNext={goToNextPage} />;
+      case 31: return <Page31_ApologyForNotListening onNext={goToNextPage} />;
+      case 32: return <Page32_ApologyForReactions onNext={goToNextPage} />;
+      case 33: return <Page33_ApologyForNotPresent onNext={goToNextPage} />;
+      case 34: return <Page34_ApologyForSelfishness onNext={goToNextPage} />;
+      case 35: return <Page35_CommitmentToGrowth onNext={goToNextPage} />;
+      case 36: return <Page36_LetterOpening onNext={goToNextPage} />;
+      case 37: return <Page37_LetterGratitude onNext={goToNextPage} />;
+      case 38: return <Page38_SpecificGratitude onNext={goToNextPage} />;
+      case 39: return <Page39_LoveYourMind onNext={goToNextPage} />;
+      case 40: return <Page40_LoveYourHeart onNext={goToNextPage} />;
+      case 41: return <Page41_LoveYourStrength onNext={goToNextPage} />;
+      case 42: return <Page42_ILoveYou onNext={goToNextPage} />;
+      case 43: return <Page43_OurFuture onNext={goToNextPage} />;
+      case 44: return <Page44_MyPromise onNext={goToNextPage} />;
+      case 45: return <Page45_ClosingWords onNext={goToNextPage} />;
+      case 46: return <Page46_Promise1Listen onNext={goToNextPage} />;
+      case 47: return <Page47_Promise2Understand onNext={goToNextPage} />;
+      case 48: return <Page48_Promise3ChooseLove onNext={goToNextPage} />;
+      case 49: return <Page49_Promise4Protect onNext={goToNextPage} />;
+      case 50: return <Page50_Promise5Grow onNext={goToNextPage} />;
+      case 51: return <Page51_Promise6Affection onNext={goToNextPage} />;
+      case 52: return <Page52_Promise7Independence onNext={goToNextPage} />;
+      case 53: return <Page53_Promise8Celebrate onNext={goToNextPage} />;
+      case 54: return <Page54_Promise9Mistakes onNext={goToNextPage} />;
+      case 55: return <Page55_Promise10Love onNext={goToNextPage} />;
+      case 56: return <Page56_YouAreBeautiful onNext={goToNextPage} />;
+      case 57: return <Page57_YouAreWorthy onNext={goToNextPage} />;
+      case 58: return <Page58_YouAreStrong onNext={goToNextPage} />;
+      case 59: return <Page59_YouAreEnough onNext={goToNextPage} />;
+      case 60: return <Page60_YouAreChosen onNext={goToNextPage} />;
+      case 61: return <Page61_WeCommunicate onNext={goToNextPage} />;
+      case 62: return <Page62_WeRespect onNext={goToNextPage} />;
+      case 63: return <Page63_WeLaugh onNext={goToNextPage} />;
+      case 64: return <Page64_WeSurvived onNext={goToNextPage} />;
+      case 65: return <Page65_WeChoose onNext={goToNextPage} />;
       case 100: return <Page100_ForeverPage onRestart={() => goToPage(1)} />;
       default:
+        if (currentPage > 65 && currentPage < 100) {
+          return <GenericPageComponent pageNumber={currentPage} onNext={goToNextPage} />;
+        }
         return (
           <div className="min-h-screen flex flex-col items-center justify-center px-6">
             <div className="text-center glass-card rounded-3xl p-12 max-w-2xl">
