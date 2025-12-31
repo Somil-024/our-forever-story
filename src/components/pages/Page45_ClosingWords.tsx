@@ -5,9 +5,10 @@ import FloatingHearts from "@/components/FloatingHearts";
 
 interface PageProps {
   onNext: () => void;
+  onGameClick?: (pageNum: number) => void;
 }
 
-const Page45_ClosingWords = ({ onNext }: PageProps) => {
+const Page45_ClosingWords = ({ onNext, onGameClick }: PageProps) => {
   return (
     <div className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-6 py-20">
       <FloatingHearts />
