@@ -5,6 +5,7 @@ import FloatingHearts from "@/components/FloatingHearts";
 
 interface PageProps {
   onNext: () => void;
+  onGameClick?: (pageNum: number) => void;
 }
 
 const memories = [
@@ -17,7 +18,7 @@ const memories = [
   { emoji: "❤️", text: "The way the movie didn't matter — just being with you mattered" },
 ];
 
-const Page20_MovieNights = ({ onNext }: PageProps) => {
+const Page20_MovieNights = ({ onNext, onGameClick }: PageProps) => {
   return (
     <div className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-6 py-20">
       <FloatingHearts />
@@ -116,10 +117,25 @@ const Page20_MovieNights = ({ onNext }: PageProps) => {
         </motion.div>
 
         <motion.div
+          className="flex flex-col gap-4"
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 3.5 }}
         >
+          <motion.div
+            className="p-6 bg-gradient-to-r from-blush/10 to-love-red/10 rounded-2xl border border-blush/20"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 3.8 }}>
+            <p className="font-body text-lg text-cream/90 mb-4">
+              Yaadein dekh li? Ab choice time!
+            </p>
+            <button
+              onClick={() => onGameClick?.(92)}
+              className="w-full px-6 py-3 bg-gradient-to-r from-blush to-love-red rounded-full font-display text-white hover:shadow-glow transition-all transform hover:scale-105">
+              Will You Choose Me Again? → Page 92
+            </button>
+          </motion.div>
           <NavigationButton onClick={onNext}>
             The spontaneous adventures were magical
           </NavigationButton>
