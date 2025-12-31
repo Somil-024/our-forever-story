@@ -66,6 +66,15 @@ import Page62_WeRespect from "@/components/pages/Page62_WeRespect";
 import Page63_WeLaugh from "@/components/pages/Page63_WeLaugh";
 import Page64_WeSurvived from "@/components/pages/Page64_WeSurvived";
 import Page65_WeChoose from "@/components/pages/Page65_WeChoose";
+import Page91_LoveMeter from "@/components/pages/Page91_LoveMeter";
+import Page92_WillYouChooseMe from "@/components/pages/Page92_WillYouChooseMe";
+import Page93_WhoIsMore from "@/components/pages/Page93_WhoIsMore";
+import Page94_TruthOrDare from "@/components/pages/Page94_TruthOrDare";
+import Page95_ComplimentGenerator from "@/components/pages/Page95_ComplimentGenerator";
+import Page96_EmojiStory from "@/components/pages/Page96_EmojiStory";
+import Page97_FuturePicker from "@/components/pages/Page97_FuturePicker";
+import Page98_GuessMyAnswer from "@/components/pages/Page98_GuessMyAnswer";
+import Page99_GameHub from "@/components/pages/Page99_GameHub";
 import GenericPageComponent from "@/components/pages/GenericPage";
 import Page100_ForeverPage from "@/components/pages/Page100_ForeverPage";
 
@@ -171,9 +180,18 @@ const Index = () => {
       case 63: return <Page63_WeLaugh onNext={goToNextPage} />;
       case 64: return <Page64_WeSurvived onNext={goToNextPage} />;
       case 65: return <Page65_WeChoose onNext={goToNextPage} />;
+      case 91: return <Page91_LoveMeter onNext={goToNextPage} onBackToStory={goToPage} />;
+      case 92: return <Page92_WillYouChooseMe onNext={goToNextPage} onBackToStory={goToPage} />;
+      case 93: return <Page93_WhoIsMore onNext={goToNextPage} onBackToStory={goToPage} />;
+      case 94: return <Page94_TruthOrDare onNext={goToNextPage} onBackToStory={goToPage} />;
+      case 95: return <Page95_ComplimentGenerator onNext={goToNextPage} onBackToStory={goToPage} />;
+      case 96: return <Page96_EmojiStory onNext={goToNextPage} onBackToStory={goToPage} />;
+      case 97: return <Page97_FuturePicker onNext={goToNextPage} onBackToStory={goToPage} />;
+      case 98: return <Page98_GuessMyAnswer onNext={goToNextPage} onBackToStory={goToPage} />;
+      case 99: return <Page99_GameHub onNext={goToNextPage} onGameClick={goToPage} />;
       case 100: return <Page100_ForeverPage onRestart={() => goToPage(1)} />;
       default:
-        if (currentPage > 65 && currentPage < 100) {
+        if (currentPage > 65 && currentPage < 91) {
           return <GenericPageComponent pageNumber={currentPage} onNext={goToNextPage} />;
         }
         return (
