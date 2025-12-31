@@ -35,8 +35,8 @@ const Page99_GameHub = ({ onNext, onGameClick }: Page99Props) => {
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ delay: 0.5, type: "spring" }}>
-            <Gamepad2 className="w-10 h-10 text-blush" />
-            <Heart className="w-10 h-10 text-love-red" />
+            <Gamepad2 className="w-10 h-10 text-lavender" />
+            <Heart className="w-10 h-10 text-lavender" />
             <Gamepad2 className="w-10 h-10 text-lavender" />
           </motion.div>
 
@@ -88,7 +88,7 @@ const Page99_GameHub = ({ onNext, onGameClick }: Page99Props) => {
           </p>
           <button
             onClick={onNext}
-            className="px-8 py-4 bg-gradient-to-r from-blush to-love-red rounded-full font-display text-white hover:shadow-glow transition-all transform hover:scale-105">
+            className="px-8 py-4 bg-gradient-to-r from-lavender to-lavender-dark rounded-full font-display text-white hover:shadow-glow transition-all transform hover:scale-105">
             Finish Games → Page 100
           </button>
         </motion.div>
