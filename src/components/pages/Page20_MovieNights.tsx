@@ -132,7 +132,7 @@ const Page20_MovieNights = ({ onNext, onGameClick }: PageProps) => {
             </p>
             <button
               onClick={() => onGameClick?.(92)}
-              className="w-full px-6 py-3 bg-gradient-to-r from-blush to-love-red rounded-full font-display text-white hover:shadow-glow transition-all transform hover:scale-105">
+              className="w-full px-6 py-3 bg-gradient-to-r from-lavender to-lavender-dark rounded-full font-display text-white hover:shadow-glow transition-all transform hover:scale-105">
               Will You Choose Me Again? → Page 92
             </button>
           </motion.div>
