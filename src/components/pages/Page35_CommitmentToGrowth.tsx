@@ -35,7 +35,7 @@ const Page35_CommitmentToGrowth = ({ onNext }: PageProps) => {
           transition={{ delay: 0.3, type: "spring" }}
         >
           <Sparkles className="w-14 h-14 text-lavender" />
-          <Growth className="w-12 h-12 text-champagne" />
+          <TrendingUp className="w-12 h-12 text-champagne" />
         </motion.div>
 
         <motion.h1
