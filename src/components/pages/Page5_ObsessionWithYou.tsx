@@ -1,20 +1,11 @@
 import { motion } from "framer-motion";
-import { Heart, Sun, Moon, Sunset, Smile, Coffee, Music } from "lucide-react";
+import { Heart, Sun, Moon, Smile } from "lucide-react";
 import NavigationButton from "@/components/NavigationButton";
 import FloatingHearts from "@/components/FloatingHearts";
 
 interface PageProps {
   onNext: () => void;
 }
-
-const thoughts = [
-  { time: "6:00 AM", icon: Sun, text: "First thought: her smile", color: "text-champagne" },
-  { time: "9:00 AM", icon: Coffee, text: "Wish she was here for coffee", color: "text-blush" },
-  { time: "12:00 PM", icon: Music, text: "This song reminds me of her", color: "text-lavender" },
-  { time: "3:00 PM", icon: Smile, text: "Can't wait to tell her this", color: "text-champagne" },
-  { time: "6:00 PM", icon: Sunset, text: "She'd love this sunset", color: "text-blush" },
-  { time: "11:00 PM", icon: Moon, text: "Last thought: her voice", color: "text-lavender" },
-];
 
 const Page5_ObsessionWithYou = ({ onNext }: PageProps) => {
   return (
@@ -52,29 +43,6 @@ const Page5_ObsessionWithYou = ({ onNext }: PageProps) => {
         >
           my favorite thought
         </motion.h2>
-
-        {/* Timeline of thoughts */}
-        <motion.div
-          className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-12"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.8 }}
-        >
-          {thoughts.map((thought, index) => (
-            <motion.div
-              key={index}
-              className="glass-card rounded-2xl p-4 text-center"
-              initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ delay: 1 + index * 0.2 }}
-              whileHover={{ scale: 1.05, boxShadow: "0 0 30px hsl(330, 70%, 75%, 0.3)" }}
-            >
-              <thought.icon className={`w-8 h-8 mx-auto mb-2 ${thought.color}`} />
-              <p className="font-body text-sm text-muted-foreground">{thought.time}</p>
-              <p className={`font-body text-sm ${thought.color}`}>{thought.text}</p>
-            </motion.div>
-          ))}
-        </motion.div>
 
         {/* Main content */}
         <motion.div

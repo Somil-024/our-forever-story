@@ -11,6 +11,16 @@ import Page7_AdmittingTheLove from "@/components/pages/Page7_AdmittingTheLove";
 import Page8_TheYearYouArrived from "@/components/pages/Page8_TheYearYouArrived";
 import Page9_TransitionTo2025 from "@/components/pages/Page9_TransitionTo2025";
 import Page10_PromiseToCherish from "@/components/pages/Page10_PromiseToCherish";
+import Page11_TheGiftYouGaveMe from "@/components/pages/Page11_TheGiftYouGaveMe";
+import Page12_SectionTransition from "@/components/pages/Page12_SectionTransition";
+import Page13_YourNames from "@/components/pages/Page13_YourNames";
+import Page14_YourMind from "@/components/pages/Page14_YourMind";
+import Page15_YourHeart from "@/components/pages/Page15_YourHeart";
+import Page16_YourStrength from "@/components/pages/Page16_YourStrength";
+import Page17_YourQuirks from "@/components/pages/Page17_YourQuirks";
+import Page18_YourBeauty from "@/components/pages/Page18_YourBeauty";
+import Page19_PanipuriDates from "@/components/pages/Page19_PanipuriDates";
+import Page20_MovieNights from "@/components/pages/Page20_MovieNights";
 import Page100_ForeverPage from "@/components/pages/Page100_ForeverPage";
 
 const TOTAL_PAGES = 100;
@@ -33,7 +43,6 @@ const Index = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
 
-  // Keyboard navigation
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "ArrowRight" || e.key === " ") {
@@ -51,30 +60,28 @@ const Index = () => {
 
   const renderPage = () => {
     switch (currentPage) {
-      case 1:
-        return <Page1_EntranceCeremony onNext={goToNextPage} />;
-      case 2:
-        return <Page2_BeforeYouArrived onNext={goToNextPage} />;
-      case 3:
-        return <Page3_TheFirstMoment onNext={goToNextPage} />;
-      case 4:
-        return <Page4_FirstConversation onNext={goToNextPage} />;
-      case 5:
-        return <Page5_ObsessionWithYou onNext={goToNextPage} />;
-      case 6:
-        return <Page6_TheRealization onNext={goToNextPage} />;
-      case 7:
-        return <Page7_AdmittingTheLove onNext={goToNextPage} />;
-      case 8:
-        return <Page8_TheYearYouArrived onNext={goToNextPage} />;
-      case 9:
-        return <Page9_TransitionTo2025 onNext={goToNextPage} />;
-      case 10:
-        return <Page10_PromiseToCherish onNext={goToNextPage} />;
-      case 100:
-        return <Page100_ForeverPage onRestart={() => goToPage(1)} />;
+      case 1: return <Page1_EntranceCeremony onNext={goToNextPage} />;
+      case 2: return <Page2_BeforeYouArrived onNext={goToNextPage} />;
+      case 3: return <Page3_TheFirstMoment onNext={goToNextPage} />;
+      case 4: return <Page4_FirstConversation onNext={goToNextPage} />;
+      case 5: return <Page5_ObsessionWithYou onNext={goToNextPage} />;
+      case 6: return <Page6_TheRealization onNext={goToNextPage} />;
+      case 7: return <Page7_AdmittingTheLove onNext={goToNextPage} />;
+      case 8: return <Page8_TheYearYouArrived onNext={goToNextPage} />;
+      case 9: return <Page9_TransitionTo2025 onNext={goToNextPage} />;
+      case 10: return <Page10_PromiseToCherish onNext={goToNextPage} />;
+      case 11: return <Page11_TheGiftYouGaveMe onNext={goToNextPage} />;
+      case 12: return <Page12_SectionTransition onNext={goToNextPage} />;
+      case 13: return <Page13_YourNames onNext={goToNextPage} />;
+      case 14: return <Page14_YourMind onNext={goToNextPage} />;
+      case 15: return <Page15_YourHeart onNext={goToNextPage} />;
+      case 16: return <Page16_YourStrength onNext={goToNextPage} />;
+      case 17: return <Page17_YourQuirks onNext={goToNextPage} />;
+      case 18: return <Page18_YourBeauty onNext={goToNextPage} />;
+      case 19: return <Page19_PanipuriDates onNext={goToNextPage} />;
+      case 20: return <Page20_MovieNights onNext={goToNextPage} />;
+      case 100: return <Page100_ForeverPage onRestart={() => goToPage(1)} />;
       default:
-        // For pages not yet implemented, show a placeholder that advances
         return (
           <div className="min-h-screen flex flex-col items-center justify-center px-6">
             <div className="text-center glass-card rounded-3xl p-12 max-w-2xl">
