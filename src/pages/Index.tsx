@@ -134,14 +134,14 @@ const Index = () => {
       case 17: return <Page17_YourQuirks onNext={goToNextPage} />;
       case 18: return <Page18_YourBeauty onNext={goToNextPage} />;
       case 19: return <Page19_PanipuriDates onNext={goToNextPage} />;
-      case 20: return <Page20_MovieNights onNext={goToNextPage} />;
+      case 20: return <Page20_MovieNights onNext={goToNextPage} onGameClick={goToPage} />;
       case 21: return <Page21_RandomDrives onNext={goToNextPage} />;
       case 22: return <Page22_FavoritePlace1 onNext={goToNextPage} />;
       case 23: return <Page23_FavoritePlace2 onNext={goToNextPage} />;
       case 24: return <Page24_FavoritePlace3 onNext={goToNextPage} />;
       case 25: return <Page25_FavoritePlace4 onNext={goToNextPage} />;
       case 26: return <Page26_FavoritePlace5 onNext={goToNextPage} />;
-      case 27: return <Page27_QuietMoments onNext={goToNextPage} />;
+      case 27: return <Page27_QuietMoments onNext={goToNextPage} onGameClick={goToPage} />;
       case 28: return <Page28_Fights onNext={goToNextPage} />;
       case 29: return <Page29_Forgiveness onNext={goToNextPage} />;
       case 30: return <Page30_ApologyBegins onNext={goToNextPage} />;
@@ -149,7 +149,7 @@ const Index = () => {
       case 32: return <Page32_ApologyForReactions onNext={goToNextPage} />;
       case 33: return <Page33_ApologyForNotPresent onNext={goToNextPage} />;
       case 34: return <Page34_ApologyForSelfishness onNext={goToNextPage} />;
-      case 35: return <Page35_CommitmentToGrowth onNext={goToNextPage} />;
+      case 35: return <Page35_CommitmentToGrowth onNext={goToNextPage} onGameClick={goToPage} />;
       case 36: return <Page36_LetterOpening onNext={goToNextPage} />;
       case 37: return <Page37_LetterGratitude onNext={goToNextPage} />;
       case 38: return <Page38_SpecificGratitude onNext={goToNextPage} />;
@@ -159,7 +159,7 @@ const Index = () => {
       case 42: return <Page42_ILoveYou onNext={goToNextPage} />;
       case 43: return <Page43_OurFuture onNext={goToNextPage} />;
       case 44: return <Page44_MyPromise onNext={goToNextPage} />;
-      case 45: return <Page45_ClosingWords onNext={goToNextPage} />;
+      case 45: return <Page45_ClosingWords onNext={goToNextPage} onGameClick={goToPage} />;
       case 46: return <Page46_Promise1Listen onNext={goToNextPage} />;
       case 47: return <Page47_Promise2Understand onNext={goToNextPage} />;
       case 48: return <Page48_Promise3ChooseLove onNext={goToNextPage} />;
@@ -174,7 +174,7 @@ const Index = () => {
       case 57: return <Page57_YouAreWorthy onNext={goToNextPage} />;
       case 58: return <Page58_YouAreStrong onNext={goToNextPage} />;
       case 59: return <Page59_YouAreEnough onNext={goToNextPage} />;
-      case 60: return <Page60_YouAreChosen onNext={goToNextPage} />;
+      case 60: return <Page60_YouAreChosen onNext={goToNextPage} onGameClick={goToPage} />;
       case 61: return <Page61_WeCommunicate onNext={goToNextPage} />;
       case 62: return <Page62_WeRespect onNext={goToNextPage} />;
       case 63: return <Page63_WeLaugh onNext={goToNextPage} />;
