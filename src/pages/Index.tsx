@@ -192,7 +192,8 @@ const Index = () => {
       case 100: return <Page100_ForeverPage onRestart={() => goToPage(1)} />;
       default:
         if (currentPage > 65 && currentPage < 91) {
-          return <GenericPageComponent pageNumber={currentPage} onNext={goToNextPage} onGameClick={goToPage} />;
+          const handleNext = currentPage === 90 ? () => goToPage(99) : goToNextPage;
+          return <GenericPageComponent pageNumber={currentPage} onNext={handleNext} onGameClick={goToPage} />;
         }
         return (
           <div className="min-h-screen flex flex-col items-center justify-center px-6">
