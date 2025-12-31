@@ -26,7 +26,7 @@ const Page60_YouAreChosen = ({ onNext, onGameClick }: PageProps) => {
         <motion.div className="flex flex-col gap-4" initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 2.5 }}>
           <motion.div className="p-6 bg-gradient-to-r from-blush/10 to-love-red/10 rounded-2xl border border-blush/20" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 2.8 }}>
             <p className="font-body text-lg text-cream/90 mb-4">Emoji se kahaani banao!</p>
-            <button onClick={() => onGameClick?.(96)} className="w-full px-6 py-3 bg-gradient-to-r from-blush to-love-red rounded-full font-display text-white hover:shadow-glow transition-all transform hover:scale-105">Emoji Story Builder → Page 96</button>
+            <button onClick={() => onGameClick?.(96)} className="w-full px-6 py-3 bg-gradient-to-r from-lavender to-lavender-dark rounded-full font-display text-white hover:shadow-glow transition-all transform hover:scale-105">Emoji Story Builder → Page 96</button>
           </motion.div>
           <NavigationButton onClick={onNext}>Let's talk about our forever →</NavigationButton>
         </motion.div>
