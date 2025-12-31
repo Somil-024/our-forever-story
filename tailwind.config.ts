@@ -66,6 +66,7 @@ export default {
           DEFAULT: "hsl(var(--lavender))",
           dark: "hsl(var(--lavender-dark))",
         },
+        "love-red": "hsl(270, 60%, 65%)",
         champagne: "hsl(var(--champagne))",
         midnight: {
           DEFAULT: "hsl(var(--midnight))",
