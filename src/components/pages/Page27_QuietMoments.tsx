@@ -5,6 +5,7 @@ import FloatingHearts from "@/components/FloatingHearts";
 
 interface PageProps {
   onNext: () => void;
+  onGameClick?: (pageNum: number) => void;
 }
 
 const moments = [
@@ -18,7 +19,7 @@ const moments = [
   { emoji: "🤫", text: "Comfortable silence that said more than words could" },
 ];
 
-const Page27_QuietMoments = ({ onNext }: PageProps) => {
+const Page27_QuietMoments = ({ onNext, onGameClick }: PageProps) => {
   return (
     <div className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-6 py-20">
       <FloatingHearts />
@@ -107,10 +108,25 @@ const Page27_QuietMoments = ({ onNext }: PageProps) => {
         </motion.div>
 
         <motion.div
+          className="flex flex-col gap-4"
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 4 }}
         >
+          <motion.div
+            className="p-6 bg-gradient-to-r from-blush/10 to-love-red/10 rounded-2xl border border-blush/20"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 4.3 }}>
+            <p className="font-body text-lg text-cream/90 mb-4">
+              Couples ka honest game khelein?
+            </p>
+            <button
+              onClick={() => onGameClick?.(93)}
+              className="w-full px-6 py-3 bg-gradient-to-r from-blush to-love-red rounded-full font-display text-white hover:shadow-glow transition-all transform hover:scale-105">
+              Who Is More? → Page 93
+            </button>
+          </motion.div>
           <NavigationButton onClick={onNext}>
             But not everything was peaceful →
           </NavigationButton>
