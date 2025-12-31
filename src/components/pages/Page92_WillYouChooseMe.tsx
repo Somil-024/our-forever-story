@@ -52,28 +52,49 @@ const Page92_WillYouChooseMe = ({ onNext, onBackToStory }: Page92Props) => {
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 1 }}>
           
-          <div className="flex flex-col gap-4">
-            <button
-              onClick={() => handleChoice("yes")}
-              className="px-8 py-6 bg-gradient-to-r from-blush to-love-red rounded-full font-display text-lg text-white hover:shadow-glow transition-all transform hover:scale-105 active:scale-95">
-              Haan, 100 baar 🤍
-            </button>
+          {!answered ? (
+            <div className="flex flex-col gap-4">
+              <button
+                onClick={() => handleChoice("yes")}
+                className="px-8 py-6 bg-gradient-to-r from-blush to-love-red rounded-full font-display text-lg text-white hover:shadow-glow transition-all transform hover:scale-105 active:scale-95">
+                Haan, 100 baar 🤍
+              </button>
 
-            <motion.button
-              id="noBtn"
-              animate={{
-                x: answered && selectedChoice === "no" ? 0 : [0, 20, -20, 0],
-              }}
-              transition={{
-                duration: 0.5,
-                repeat: answered ? 0 : Infinity,
-                repeatDelay: 1,
-              }}
-              onClick={() => handleChoice("no")}
-              className="px-8 py-6 bg-gradient-to-r from-lavender to-blush rounded-full font-display text-lg text-midnight-deep hover:shadow-glow transition-all">
-              Nahi… (bhaagta rahega)
-            </motion.button>
-          </div>
+              <motion.button
+                id="noBtn"
+                animate={{
+                  x: [0, 20, -20, 0],
+                }}
+                transition={{
+                  duration: 0.5,
+                  repeat: Infinity,
+                  repeatDelay: 1,
+                }}
+                onClick={() => handleChoice("no")}
+                className="px-8 py-6 bg-gradient-to-r from-lavender to-blush rounded-full font-display text-lg text-midnight-deep hover:shadow-glow transition-all">
+                Nahi… (bhaagta rahega)
+              </motion.button>
+            </div>
+          ) : (
+            <div className="flex flex-col gap-4">
+              <button
+                onClick={() => handleChoice("yes")}
+                disabled
+                className="px-8 py-6 bg-gradient-to-r from-blush to-love-red rounded-full font-display text-lg text-white/50 transition-all opacity-50 cursor-not-allowed">
+                Haan, 100 baar 🤍
+              </button>
+
+              <button
+                disabled
+                className={`px-8 py-6 rounded-full font-display text-lg transition-all opacity-50 cursor-not-allowed ${
+                  selectedChoice === "no"
+                    ? "bg-gradient-to-r from-lavender to-blush text-midnight-deep"
+                    : "bg-gradient-to-r from-lavender to-blush text-midnight-deep"
+                }`}>
+                Nahi… (bhaagta rahega)
+              </button>
+            </div>
+          )}
 
           {answered && selectedChoice === "yes" && (
             <motion.div
