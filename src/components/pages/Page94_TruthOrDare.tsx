@@ -12,15 +12,33 @@ const Page94_TruthOrDare = ({ onNext, onBackToStory }: Page94Props) => {
   const [selected, setSelected] = useState<"truth" | "dare" | null>(null);
 
   const truths = [
-    "Mere bare mein pehle kya notice kiya?",
-    "Sabse pehle hum se kya impress hua?",
-    "Mujhe sab se zyada kaunsa trait pasand hai?",
+    "Mere bare mein sabse pehle kya notice kiya tha? (Honest batao 😏)",
+    "Kab mujhe pehli baar 'cute' bola internally?",
+    "Hamari sabse embarrassing moment kaunsi thi?",
+    "Mera ek habit jo tumhe secretly bohot pasand hai?",
+    "Jab main gussa hota hoon, tumhe kaisa lagta hai?",
+    "Tumhara favorite 'our moment' kaunsa hai?",
+    "Mujhse kab pehli baar impress hui thi?",
+    "Mera ek outfit jo tumhe bohot pasand aaya?",
+    "Hamari pehli fight mein tum sach mein kya soch rahi thi?",
+    "Mere bare mein ek cheez jo tumne kabhi kisi ko nahi batayi?",
+    "Mujhe kis cheez mein weak feel karti ho?",
+    "Hamari chemistry kitni perfect hai? (1-10)"
   ];
 
   const dares = [
-    "Aaj 'I miss you' voice note bhejna!",
-    "Mujhe apna favorite selfie send karo",
-    "Hamara favorite song gaao aur record karo",
+    "Aaj mujhe 3 selfies bhejna (no filter, natural wali 😘)",
+    "Mera favorite song dedicate karke voice note bhejna 🎵",
+    "Tumhari DP 24 hours ke liye hamari ek photo rakhni hai 📸",
+    "Mujhe ek 30 sec ka 'I miss you' video bhejna 📹",
+    "Aaj raat 11 baje goodnight call karna (no excuses 🌙)",
+    "Mere naam se ek Instagram story daalna 💕",
+    "Kal subah pehla message sirf mujhe bhejna (good morning wala ☀️)",
+    "Ek photo bhejna jisme tum meri photo ke saath ho 🖼️",
+    "Mujhe apna current mood emoji bhejna + reason 🤭",
+    "Aaj koi bhi decision lene se pehle mujhse poochna 😂",
+    "Mera naam 10 baar bolke video bhejna (cutely) 🥰",
+    "Aaj mujhe 'baby' bolke 5 messages bhejna 💕"
   ];
 
   const randomTruth = truths[Math.floor(Math.random() * truths.length)];
