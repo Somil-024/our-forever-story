@@ -413,9 +413,10 @@ const getPageData = (pageNumber: number) => {
 interface GenericPageComponentProps {
   pageNumber: number;
   onNext: () => void;
+  onGameClick?: (pageNum: number) => void;
 }
 
-const GenericPageComponent = ({ pageNumber, onNext }: GenericPageComponentProps) => {
+const GenericPageComponent = ({ pageNumber, onNext, onGameClick }: GenericPageComponentProps) => {
   const page = getPageData(pageNumber);
 
   return (
@@ -440,7 +441,19 @@ const GenericPageComponent = ({ pageNumber, onNext }: GenericPageComponentProps)
             ))}
           </motion.div>
         </motion.div>
-        <motion.div initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 2.5 }}>
+        <motion.div className="flex flex-col gap-4" initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 2.5 }}>
+          {pageNumber === 75 && (
+            <motion.div className="p-6 bg-gradient-to-r from-blush/10 to-love-red/10 rounded-2xl border border-blush/20" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 2.8 }}>
+              <p className="font-body text-lg text-cream/90 mb-4">Future plan karte hain?</p>
+              <button onClick={() => onGameClick?.(97)} className="w-full px-6 py-3 bg-gradient-to-r from-blush to-love-red rounded-full font-display text-white hover:shadow-glow transition-all transform hover:scale-105">Future Picker → Page 97</button>
+            </motion.div>
+          )}
+          {pageNumber === 85 && (
+            <motion.div className="p-6 bg-gradient-to-r from-blush/10 to-love-red/10 rounded-2xl border border-blush/20" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 2.8 }}>
+              <p className="font-body text-lg text-cream/90 mb-4">Last game before forever!</p>
+              <button onClick={() => onGameClick?.(98)} className="w-full px-6 py-3 bg-gradient-to-r from-blush to-love-red rounded-full font-display text-white hover:shadow-glow transition-all transform hover:scale-105">Guess My Answer → Page 98</button>
+            </motion.div>
+          )}
           <NavigationButton onClick={onNext}>Continue →</NavigationButton>
         </motion.div>
       </motion.div>
