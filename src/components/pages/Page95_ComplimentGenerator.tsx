@@ -43,7 +43,7 @@ const Page95_ComplimentGenerator = ({ onNext, onBackToStory }: Page95Props) => {
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           transition={{ delay: 0.3, type: "spring" }}>
-          <Heart className="w-14 h-14 text-love-red" />
+          <Heart className="w-14 h-14 text-lavender" />
         </motion.div>
 
         <motion.h1 className="font-display text-4xl md:text-5xl font-bold mb-4 text-gradient-romantic"
@@ -60,7 +60,7 @@ const Page95_ComplimentGenerator = ({ onNext, onBackToStory }: Page95Props) => {
           
           <button
             onClick={generateCompliment}
-            className="w-full px-8 py-6 bg-gradient-to-r from-blush to-love-red rounded-full font-display text-xl text-white hover:shadow-glow transition-all transform hover:scale-105 active:scale-95 mb-8">
+            className="w-full px-8 py-6 bg-gradient-to-r from-lavender to-lavender-dark rounded-full font-display text-xl text-white hover:shadow-glow transition-all transform hover:scale-105 active:scale-95 mb-8">
             Compliment do 💕
           </button>
 
@@ -69,7 +69,7 @@ const Page95_ComplimentGenerator = ({ onNext, onBackToStory }: Page95Props) => {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.3 }}
-              className="p-6 bg-gradient-to-r from-blush/20 to-love-red/20 rounded-2xl">
+              className="p-6 bg-gradient-to-r from-lavender/20 to-lavender-dark/20 rounded-2xl">
               <p className="font-body text-2xl text-cream/90 font-semibold">
                 {currentCompliment}
               </p>
@@ -83,7 +83,7 @@ const Page95_ComplimentGenerator = ({ onNext, onBackToStory }: Page95Props) => {
           transition={{ delay: 2.5 }}>
           <button
             onClick={() => onBackToStory(46)}
-            className="px-8 py-4 bg-gradient-to-r from-lavender to-blush rounded-full font-display text-midnight-deep hover:shadow-glow transition-all">
+            className="px-8 py-4 bg-gradient-to-r from-lavender to-lavender-dark rounded-full font-display text-cream hover:shadow-glow transition-all">
             Back to Story → Page 46
           </button>
         </motion.div>

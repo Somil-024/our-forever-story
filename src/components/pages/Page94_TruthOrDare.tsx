@@ -56,7 +56,7 @@ const Page94_TruthOrDare = ({ onNext, onBackToStory }: Page94Props) => {
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           transition={{ delay: 0.3, type: "spring" }}>
-          <Heart className="w-14 h-14 text-love-red" />
+          <Heart className="w-14 h-14 text-lavender" />
         </motion.div>
 
         <motion.h1 className="font-display text-4xl md:text-5xl font-bold mb-4 text-gradient-romantic"
@@ -75,13 +75,13 @@ const Page94_TruthOrDare = ({ onNext, onBackToStory }: Page94Props) => {
             <div className="flex flex-col gap-4">
               <button
                 onClick={() => setSelected("truth")}
-                className="px-8 py-6 bg-gradient-to-r from-blush to-love-red rounded-full font-display text-lg text-white hover:shadow-glow transition-all transform hover:scale-105 active:scale-95">
+                className="px-8 py-6 bg-gradient-to-r from-lavender to-lavender-dark rounded-full font-display text-lg text-white hover:shadow-glow transition-all transform hover:scale-105 active:scale-95">
                 Truth 🙈
               </button>
 
               <button
                 onClick={() => setSelected("dare")}
-                className="px-8 py-6 bg-gradient-to-r from-lavender to-blush rounded-full font-display text-lg text-midnight-deep hover:shadow-glow transition-all transform hover:scale-105 active:scale-95">
+                className="px-8 py-6 bg-gradient-to-r from-lavender to-lavender-dark rounded-full font-display text-lg text-cream hover:shadow-glow transition-all transform hover:scale-105 active:scale-95">
                 Dare 🔥
               </button>
             </div>
@@ -112,7 +112,7 @@ const Page94_TruthOrDare = ({ onNext, onBackToStory }: Page94Props) => {
           transition={{ delay: 2.5 }}>
           <button
             onClick={() => onBackToStory(36)}
-            className="px-8 py-4 bg-gradient-to-r from-lavender to-blush rounded-full font-display text-midnight-deep hover:shadow-glow transition-all">
+            className="px-8 py-4 bg-gradient-to-r from-lavender to-lavender-dark rounded-full font-display text-cream hover:shadow-glow transition-all">
             Back to Story → Page 36
           </button>
         </motion.div>
