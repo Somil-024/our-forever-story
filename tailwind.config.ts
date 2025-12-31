@@ -57,6 +57,27 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        // Romantic palette
+        blush: {
+          DEFAULT: "hsl(var(--blush))",
+          light: "hsl(var(--blush-light))",
+        },
+        lavender: {
+          DEFAULT: "hsl(var(--lavender))",
+          dark: "hsl(var(--lavender-dark))",
+        },
+        champagne: "hsl(var(--champagne))",
+        midnight: {
+          DEFAULT: "hsl(var(--midnight))",
+          deep: "hsl(var(--midnight-deep))",
+        },
+        cream: "hsl(var(--cream))",
+        "rose-gold": "hsl(var(--rose-gold))",
+      },
+      fontFamily: {
+        display: ["Playfair Display", "serif"],
+        body: ["Cormorant Garamond", "serif"],
+        script: ["Dancing Script", "cursive"],
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -65,25 +86,28 @@ export default {
       },
       keyframes: {
         "accordion-down": {
-          from: {
-            height: "0",
-          },
-          to: {
-            height: "var(--radix-accordion-content-height)",
-          },
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
-          from: {
-            height: "var(--radix-accordion-content-height)",
-          },
-          to: {
-            height: "0",
-          },
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+      },
+      backgroundImage: {
+        "gradient-romantic": "var(--gradient-romantic)",
+        "gradient-midnight": "var(--gradient-midnight)",
+        "gradient-hero": "var(--gradient-hero)",
+        "gradient-glow": "var(--gradient-glow)",
+      },
+      boxShadow: {
+        glow: "var(--shadow-glow)",
+        soft: "var(--shadow-soft)",
+        romantic: "var(--shadow-romantic)",
       },
     },
   },
