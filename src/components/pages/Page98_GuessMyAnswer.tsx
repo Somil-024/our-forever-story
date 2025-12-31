@@ -75,11 +75,8 @@ const Page98_GuessMyAnswer = ({ onNext, onBackToStory }: Page98Props) => {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.3 }}
               className="mt-8 p-6 bg-gradient-to-r from-blush/20 to-love-red/20 rounded-2xl">
-              <p className="font-body text-lg text-cream/90 font-semibold mb-3">
-                Sab sahi! 🎉
-              </p>
-              <p className="font-body text-xl text-cream/90 font-bold">
-                Tum meri jaan + best + funny irritating bhi 😍
+              <p className="font-body text-xl text-cream/90 font-bold leading-relaxed">
+                Are Betu Itna Kya sochna tum dono ho Aur mai sirf tumhare baare m sochta hu 💕
               </p>
             </motion.div>
           )}
